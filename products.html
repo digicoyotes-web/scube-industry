@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" ng-app="scubeApp">
 <head>
     <meta charset="UTF-8">
@@ -298,13 +298,13 @@
         .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; margin-top: 40px; text-align: center; color: #777; font-size: 0.75rem; }
     </style>
 </head>
-<body ng-controller="ProductCtrl">
+<body>
 
     <div class="top-bar py-2 d-none d-lg-block">
         <div class="container d-flex justify-content-between">
             <div>
                 <span class="me-4"><i class="fas fa-phone-alt"></i> +91 87794 45970</span>
-                <span><i class="fas fa-envelope"></i> sales@scubeindustries.com</span>
+                <span><i class="fas fa-envelope"></i> info@scubeindustries.com</span>
             </div>
             <div>
                 <span class="me-4"><i class="fas fa-clock"></i> Mon - Sat: 9:00 AM - 6:00 PM</span>
@@ -361,45 +361,255 @@
     <header class="page-header">
         <div class="container">
             <h1 style="font-family: 'Montserrat', sans-serif !important;">Our Products</h1>
-            <p>Premium Engineering Solutions for Oil & Gas Applications</p>
+            <p>We manufacture and supply high-quality engineered components and equipment for the Oil & Gas, Petrochemical, Energy, and Industrial sectors, meeting international standards and client specifications.</p>
         </div>
     </header>
 
     <!-- Products Section -->
     <section class="py-5">
         <div class="container">
-            <div class="text-center mb-5">
-                <span class="section-subtitle">Precision Engineered</span>
-                <h2 class="section-title">Core Product Range</h2>
-                <p class="text-muted" style="max-width: 600px; margin: 20px auto;">Our comprehensive portfolio of products is designed to meet the demanding requirements of the oil and gas industry with superior quality and reliability.</p>
-            </div>
-
-            <!-- Category Filters -->
-            <div class="category-filter">
-                <button class="category-btn active" ng-click="filterCategory('all')">All Products</button>
-                <button class="category-btn" ng-click="filterCategory('wireline')">Wireline Tools</button>
-                <button class="category-btn" ng-click="filterCategory('coiled')">Coiled Tubing</button>
-                <button class="category-btn" ng-click="filterCategory('completion')">Completion Equipment</button>
-                <button class="category-btn" ng-click="filterCategory('flow')">Flow Control</button>
-            </div>
-
-            <!-- Products Grid Display -->
-            <div ng-repeat="(category, items) in productsByCategory" ng-show="showCategory(category)" class="category-section">
-                <h3 class="category-section-title">{{category | uppercase}}</h3>
-                <div class="row g-4">
-                    <div class="col-md-6 col-lg-4" ng-repeat="product in items">
+            <!-- Oil & Gas Equipment & Components -->
+            <div class="category-section">
+                <h3 class="category-section-title">Oil & Gas Equipment & Components</h3>
+                <p class="text-muted mb-4">We offer a wide range of specialized components for oilfield and drilling operations:</p>
+                <div class="row g-4 mb-5">
+                    <div class="col-md-6 col-lg-4">
                         <div class="card product-card">
                             <div class="product-img-wrapper">
-                                <img ng-src="{{product.image}}" class="product-img" alt="{{product.title}}">
-                                <span class="product-badge" ng-if="product.badge">{{product.badge}}</span>
+                                <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=400&q=80" class="product-img" alt="Cross-overs">
                             </div>
                             <div class="product-card-body">
-                                <h5 class="product-title">{{product.title}}</h5>
-                                <p class="product-desc">{{product.desc}}</p>
-                                <div class="product-specs">
-                                    <span ng-repeat="spec in product.specs"><strong>{{spec.label}}:</strong> {{spec.value}}</span>
-                                </div>
-                                <button class="product-btn" ng-click="viewProduct(product)">View Details</button>
+                                <h5 class="product-title">Cross-overs, API-5CT & 7-1 threads</h5>
+                                <p class="product-desc">EUE, NUE, IF, Regular, AMWT, and other thread configurations for seamless connections.</p>
+                                <button class="product-btn">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card product-card">
+                            <div class="product-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=400&q=80" class="product-img" alt="Landing nipples">
+                            </div>
+                            <div class="product-card-body">
+                                <h5 class="product-title">Landing nipples</h5>
+                                <p class="product-desc">Precision-engineered landing nipples for downhole tool positioning and well completion.</p>
+                                <button class="product-btn">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card product-card">
+                            <div class="product-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=400&q=80" class="product-img" alt="Safety valves">
+                            </div>
+                            <div class="product-card-body">
+                                <h5 class="product-title">Safety valves</h5>
+                                <p class="product-desc">High-performance safety valves for well control and pressure management systems.</p>
+                                <button class="product-btn">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card product-card">
+                            <div class="product-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=400&q=80" class="product-img" alt="Hydraulic packers">
+                            </div>
+                            <div class="product-card-body">
+                                <h5 class="product-title">Hydraulic packers</h5>
+                                <p class="product-desc">Reliable hydraulic packer systems for well isolation and completion operations.</p>
+                                <button class="product-btn">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card product-card">
+                            <div class="product-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=400&q=80" class="product-img" alt="Wireline tools">
+                            </div>
+                            <div class="product-card-body">
+                                <h5 class="product-title">Wireline tools for fishing operations</h5>
+                                <p class="product-desc">Specialized wireline tools designed for efficient fishing and retrieval operations.</p>
+                                <button class="product-btn">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card product-card">
+                            <div class="product-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=400&q=80" class="product-img" alt="BOPs">
+                            </div>
+                            <div class="product-card-body">
+                                <h5 class="product-title">BOPs (Blowout Preventers)</h5>
+                                <p class="product-desc">Critical safety equipment for well control and blowout prevention systems.</p>
+                                <button class="product-btn">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Precision Machined Parts -->
+            <div class="category-section">
+                <h3 class="category-section-title">Precision Machined Parts</h3>
+                <p class="text-muted mb-4">We manufacture high-precision CNC machined components for critical applications:</p>
+                <div class="row g-4 mb-5">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card product-card">
+                            <div class="product-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=400&q=80" class="product-img" alt="CNC machined parts">
+                            </div>
+                            <div class="product-card-body">
+                                <h5 class="product-title">CNC machined parts (small to heavy-duty)</h5>
+                                <p class="product-desc">Precision CNC machining services from small components to heavy-duty industrial parts.</p>
+                                <button class="product-btn">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card product-card">
+                            <div class="product-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=400&q=80" class="product-img" alt="Shafts and rods">
+                            </div>
+                            <div class="product-card-body">
+                                <h5 class="product-title">Shafts, rods, bushings, sleeves</h5>
+                                <p class="product-desc">High-precision shafts, rods, bushings, and sleeves for various industrial applications.</p>
+                                <button class="product-btn">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card product-card">
+                            <div class="product-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=400&q=80" class="product-img" alt="Custom parts">
+                            </div>
+                            <div class="product-card-body">
+                                <h5 class="product-title">Custom-designed parts as per drawings</h5>
+                                <p class="product-desc">Bespoke manufacturing services based on customer drawings or sample specifications.</p>
+                                <button class="product-btn">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card product-card">
+                            <div class="product-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=400&q=80" class="product-img" alt="Tight tolerance parts">
+                            </div>
+                            <div class="product-card-body">
+                                <h5 class="product-title">Tight tolerance & critical application components</h5>
+                                <p class="product-desc">Ultra-precision components for critical applications requiring tight tolerances.</p>
+                                <button class="product-btn">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Oil & Gas Components (Valves & Fittings) -->
+            <div class="category-section">
+                <h3 class="category-section-title">Oil & Gas Components (Valves & Fittings)</h3>
+                <p class="text-muted mb-4">Our range also includes essential flow-control and structural components:</p>
+                <div class="row g-4 mb-5">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card product-card">
+                            <div class="product-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=400&q=80" class="product-img" alt="Valve components">
+                            </div>
+                            <div class="product-card-body">
+                                <h5 class="product-title">Valve components (stems, bodies, seats, trim parts)</h5>
+                                <p class="product-desc">Complete range of valve components including stems, bodies, seats, and trim parts.</p>
+                                <button class="product-btn">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card product-card">
+                            <div class="product-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=400&q=80" class="product-img" alt="Flanges and fittings">
+                            </div>
+                            <div class="product-card-body">
+                                <h5 class="product-title">Flanges, fittings, and connectors</h5>
+                                <p class="product-desc">High-quality flanges, fittings, and connectors for pipeline and process systems.</p>
+                                <button class="product-btn">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card product-card">
+                            <div class="product-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=400&q=80" class="product-img" alt="Drilling components">
+                            </div>
+                            <div class="product-card-body">
+                                <h5 class="product-title">Drilling and production components</h5>
+                                <p class="product-desc">Specialized components for drilling operations and production systems.</p>
+                                <button class="product-btn">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card product-card">
+                            <div class="product-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=400&q=80" class="product-img" alt="Pressure parts">
+                            </div>
+                            <div class="product-card-body">
+                                <h5 class="product-title">Pressure-containing parts</h5>
+                                <p class="product-desc">Critical pressure-containing components designed for high-pressure applications.</p>
+                                <button class="product-btn">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card product-card">
+                            <div class="product-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=400&q=80" class="product-img" alt="Machined forged components">
+                            </div>
+                            <div class="product-card-body">
+                                <h5 class="product-title">Machined forged components</h5>
+                                <p class="product-desc">High-strength machined forged components for demanding industrial applications.</p>
+                                <button class="product-btn">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Custom Fabrication -->
+            <div class="category-section">
+                <h3 class="category-section-title">Custom Fabrication</h3>
+                <p class="text-muted mb-4">We provide tailored fabrication solutions to meet unique project requirements:</p>
+                <div class="row g-4 mb-5">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card product-card">
+                            <div class="product-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1531604250646-2f0e818c4f06?auto=format&fit=crop&w=400&q=80" class="product-img" alt="Built-to-order components">
+                            </div>
+                            <div class="product-card-body">
+                                <h5 class="product-title">Built-to-order components</h5>
+                                <p class="product-desc">Custom-built components manufactured to exact customer specifications and requirements.</p>
+                                <button class="product-btn">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card product-card">
+                            <div class="product-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1531604250646-2f0e818c4f06?auto=format&fit=crop&w=400&q=80" class="product-img" alt="Prototype development">
+                            </div>
+                            <div class="product-card-body">
+                                <h5 class="product-title">Prototype development</h5>
+                                <p class="product-desc">Rapid prototype development services for testing and validation of new designs.</p>
+                                <button class="product-btn">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card product-card">
+                            <div class="product-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1531604250646-2f0e818c4f06?auto=format&fit=crop&w=400&q=80" class="product-img" alt="Bulk production">
+                            </div>
+                            <div class="product-card-body">
+                                <h5 class="product-title">Low-volume to bulk production</h5>
+                                <p class="product-desc">Flexible production capabilities from low-volume custom orders to bulk manufacturing.</p>
+                                <button class="product-btn">View Details</button>
                             </div>
                         </div>
                     </div>
@@ -504,7 +714,7 @@
                         badge: 'New',
                         specs: [
                             { label: 'Design', value: 'Streamlined Geometry' },
-                            { label: 'Temperature', value: 'Up to 250°C' },
+                            { label: 'Temperature', value: 'Up to 250�C' },
                             { label: 'Compatibility', value: 'All Cable Types' }
                         ]
                     }
@@ -548,7 +758,7 @@
                         image: 'https://images.unsplash.com/photo-1531604250646-2f0e818c4f06?auto=format&fit=crop&w=400&q=80',
                         specs: [
                             { label: 'Seal Type', value: 'Elastomer' },
-                            { label: 'Temperature', value: '120 - 175°C' },
+                            { label: 'Temperature', value: '120 - 175�C' },
                             { label: 'Setting Method', value: 'Hydraulic/Mechanical' }
                         ]
                     },
@@ -601,7 +811,7 @@
                         badge: 'New',
                         specs: [
                             { label: 'Technology', value: 'Turbine/Electromagnetic' },
-                            { label: 'Accuracy', value: '±1%' },
+                            { label: 'Accuracy', value: '�1%' },
                             { label: 'Digital Output', value: '4-20mA' }
                         ]
                     }
