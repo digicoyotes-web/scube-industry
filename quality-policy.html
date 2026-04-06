@@ -19,9 +19,9 @@
             --text-light: #fff;
         }
 
-        body { font-family: 'Montserrat', sans-serif; color: var(--text-dark); overflow-x: hidden; line-height: 1.6; font-size: 1rem; font-weight: 400; }
-        h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; line-height: 1.2; }
-        p { line-height: 1.6; }
+        body { font-family: 'Montserrat', sans-serif; color: var(--text-dark); overflow-x: hidden; line-height: 1.6; font-size: 1rem; font-weight: 500; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; line-height: 1.2; font-weight: 700; }
+        p { line-height: 1.6; font-weight: 500; }
 
         /* --- HEADER STYLES --- */
         .top-bar { background-color: #fff; border-bottom: 1px solid #eee; font-size: 0.8rem; font-weight: 500; }
@@ -37,40 +37,38 @@
             padding: 10px 24px; font-size: 0.85rem; border: 2px solid var(--primary-blue); transition: all 0.3s ease;
         }
         .btn-primary-custom:hover { background-color: transparent; color: var(--primary-blue); }
-		/* --- Page Header Banner Styles --- */
-.page-header {
-    background-color: #005a92; /* Image ke hisaab se deep blue color */
-    /* Agar aapko thoda gradient chahiye toh niche wali line use karein: */
-    /* background: linear-gradient(to right, #004e7c, #0066a3); */
-    padding: 80px 0; /* Upar aur niche ki spacing */
-    color: white;
-    width: 100%;
-}
+        /* --- Page Header Banner Styles --- */
+        .page-header {
+            background: linear-gradient(to right, rgba(2, 32, 76, 0.85) 0%, rgba(2, 32, 76, 0.7) 100%), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            padding: 100px 0;
+            color: white;
+            width: 100%;
+        }
 
-.page-title {
-    font-size: 3rem; /* Bada aur bold text */
-    font-weight: 800;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-}
+        .page-title {
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
 
-.page-subtitle {
-    font-size: 1.1rem;
-    font-weight: 400;
-    opacity: 0.9; /* Text ko thoda soft dikhane ke liye */
-    letter-spacing: 0.5px;
-}
+        .page-subtitle {
+            font-size: 1.1rem;
+            font-weight: 500;
+            opacity: 0.9;
+            letter-spacing: 0.5px;
+        }
 
-/* Mobile responsive karne ke liye */
-@media (max-width: 768px) {
-    .page-title {
-        font-size: 2rem;
-    }
-    .page-header {
-        padding: 50px 0;
-    }
-}
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2rem;
+            }
+            .page-header {
+                padding: 60px 0;
+            }
+        }
 .quality-section {
     background-color: #fcfcfc;
     padding: 80px 0;
