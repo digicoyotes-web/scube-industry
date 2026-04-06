@@ -79,18 +79,42 @@
         /* --- Top Bar --- */
 
         .top-bar {
-
             background-color: #fff;
-
             border-bottom: 1px solid #eee;
-
             font-size: 0.8rem;
-
             font-weight: 500;
-
+            padding: 12px 0;
         }
 
         .top-bar i { color: var(--primary-blue); margin-right: 5px; }
+        
+        .top-bar span {
+            display: inline-flex;
+            align-items: center;
+            white-space: nowrap;
+            margin-right: 20px;
+        }
+        
+        .top-bar .row {
+            align-items: center;
+        }
+        
+        .top-bar-left, .top-bar-right {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .top-bar-right {
+            justify-content: flex-end;
+        }
+        
+        @media (max-width: 1200px) {
+            .top-bar span {
+                margin-right: 15px;
+            }
+        }
 
 
 
@@ -454,27 +478,22 @@
 
 
     <div class="top-bar py-2 d-none d-lg-block">
-
-        <div class="container d-flex justify-content-between">
-
-            <div>
-
-                <span class="me-4"><i class="fas fa-phone-alt"></i> +91 87794 45970</span>
-
-                <span><i class="fas fa-envelope"></i> info@scubeindustries.com</span>
-
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="top-bar-left">
+                        <span><i class="fas fa-phone-alt"></i> +91 87794 45970</span>
+                        <span><i class="fas fa-envelope"></i> info@scubeindustries.com</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="top-bar-right">
+                        <span><i class="fas fa-clock"></i> Mon - Sat: 9:00 AM - 6:00 PM</span>
+                        <span><i class="fas fa-map-marker-alt"></i> ATC-65, T.T.C MIDC AREA,<br>MAHAPE, NAVI MUMBAI - 400710</span>
+                    </div>
+                </div>
             </div>
-
-            <div>
-
-                <span class="me-4"><i class="fas fa-clock"></i> Mon - Sat: 9:00 AM - 6:00 PM</span>
-
-                <span><i class="fas fa-map-marker-alt"></i> ATC-65, T.T.C MIDC AREA, MAHAPE,<br>NAVI MUMBAI - 400710</span>
-
-            </div>
-
         </div>
-
     </div>
 
 
@@ -1003,7 +1022,7 @@
                 { title: 'WIRELINE TOOLS', desc: 'Slickline and Braided line tools built with premium materials.', image: 'wiretool.jpg.jpg' },
                 { title: 'COILED TUBING TOOLS', desc: 'Advanced tools designed for well intervention and drilling.', image: 'COILED TUBING TOOLS.jpg.jpg' },
                 { title: 'COMPLETION EQUIPMENT', desc: 'Reliable systems for well completion and production.', image: 'COMPLETION EQUIPMENT.jpg.jpg' },
-                { title: 'FLOW CONTROL', desc: 'Precision valves and fluid management systems.', image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=400&q=80' }
+                { title: 'FLOW CONTROL', desc: 'Precision valves and fluid management systems.', image: 'flow control.jpg.jpg' }
             ];
 
 
@@ -1031,21 +1050,21 @@
                 {
                     title: 'Advanced CNC Machining Capabilities Expansion',
                     excerpt: 'SCUBE Industries has expanded its manufacturing capabilities with new state-of-the-art CNC machining centers to meet growing demand.',
-                    image: 'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=400&q=80',
+                    image: 'add image in the news of home page.jpg.jpg',
                     category: 'Manufacturing',
                     date: 'March 15, 2026'
                 },
                 {
                     title: 'ISO 9001:2015 Certification Renewed',
                     excerpt: 'Our commitment to quality management systems has been recognized with the successful renewal of our ISO 9001:2015 certification.',
-                    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=400&q=80',
+                    image: 'flow control.jpg.jpg',
                     category: 'Quality',
                     date: 'March 10, 2026'
                 },
                 {
                     title: 'New Partnership in Middle East Markets',
                     excerpt: 'Strategic partnership established to expand our presence in Middle East oil & gas markets with local distribution network.',
-                    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=400&q=80',
+                    image: 'banner1.jpg.jpg',
                     category: 'Business',
                     date: 'March 5, 2026'
                 }
