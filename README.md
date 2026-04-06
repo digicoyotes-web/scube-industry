@@ -1,1 +1,1 @@
-# scube-industry
+# scube.industries
