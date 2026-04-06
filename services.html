@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" ng-app="scubeApp">
 <head>
     <meta charset="UTF-8">
@@ -286,13 +286,73 @@
         </div>
     </header>
 
+    <!-- Service Categories Overview -->
+    <section class="py-5" style="background-color: #f8f9fa;">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="section-subtitle">Service Categories</span>
+                <h2 class="section-title">Our Service Portfolio</h2>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="service-category-card" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); padding: 30px; border-radius: 12px; height: 100%; color: #333;">
+                        <h4 style="font-weight: 700; margin-bottom: 20px; color: #333;"><i class="fas fa-cog me-2"></i>Manufacturing Services</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="margin-bottom: 8px;"><i class="fas fa-check me-2" style="color: #28a745;"></i>CNC turning & milling</li>
+                            <li style="margin-bottom: 8px;"><i class="fas fa-check me-2" style="color: #28a745;"></i>Drilling, boring, threading</li>
+                            <li style="margin-bottom: 8px;"><i class="fas fa-check me-2" style="color: #28a745;"></i>Heat treatment coordination</li>
+                            <li style="margin-bottom: 8px;"><i class="fas fa-check me-2" style="color: #28a745;"></i>Surface finishing (as per requirement)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="service-category-card" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); padding: 30px; border-radius: 12px; height: 100%; color: #333;">
+                        <h4 style="font-weight: 700; margin-bottom: 20px; color: #333;"><i class="fas fa-certificate me-2"></i>Quality & Inspection</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="margin-bottom: 8px;"><i class="fas fa-check me-2" style="color: #28a745;"></i>Material Test Certificates (MTC / MTR)</li>
+                            <li style="margin-bottom: 8px;"><i class="fas fa-check me-2" style="color: #28a745;"></i>Dimensional inspection</li>
+                            <li style="margin-bottom: 8px;"><i class="fas fa-check me-2" style="color: #28a745;"></i>Hardness testing</li>
+                            <li style="margin-bottom: 8px;"><i class="fas fa-check me-2" style="color: #28a745;"></i>Third-party inspection coordination (TPI)</li>
+                            <li style="margin-bottom: 8px;"><i class="fas fa-check me-2" style="color: #28a745;"></i>Compliance with ASTM, ASME, API, NACE standards</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="service-category-card" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); padding: 30px; border-radius: 12px; height: 100%; color: #333;">
+                        <h4 style="font-weight: 700; margin-bottom: 20px; color: #333;"><i class="fas fa-drafting-compass me-2"></i>Engineering & Technical Support</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="margin-bottom: 8px;"><i class="fas fa-check me-2" style="color: #28a745;"></i>Design assistance and manufacturability review</li>
+                            <li style="margin-bottom: 8px;"><i class="fas fa-check me-2" style="color: #28a745;"></i>Material selection guidance</li>
+                            <li style="margin-bottom: 8px;"><i class="fas fa-check me-2" style="color: #28a745;"></i>Cost optimization solutions</li>
+                            <li style="margin-bottom: 8px;"><i class="fas fa-check me-2" style="color: #28a745;"></i>Documentation support</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="service-category-card" style="background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%); padding: 30px; border-radius: 12px; height: 100%; color: #333;">
+                        <h4 style="font-weight: 700; margin-bottom: 20px; color: #333;"><i class="fas fa-truck me-2"></i>Supply & After-Sales Support</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="margin-bottom: 8px;"><i class="fas fa-check me-2" style="color: #28a745;"></i>On-time delivery</li>
+                            <li style="margin-bottom: 8px;"><i class="fas fa-check me-2" style="color: #28a745;"></i>Export packaging</li>
+                            <li style="margin-bottom: 8px;"><i class="fas fa-check me-2" style="color: #28a745;"></i>Technical clarification & customer support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Main Services Section -->
     <section class="py-5">
         <div class="container">
             <div class="text-center mb-5">
                 <span class="section-subtitle">What We Provide</span>
                 <h2 class="section-title">Our Core Services</h2>
-                <p class="text-muted" style="max-width: 600px; margin: 20px auto;">We offer end-to-end engineering solutions tailored to meet the unique requirements of the oil & gas industry.</p>
+                <p class="text-muted" style="max-width: 800px; margin: 20px auto;">We provide end-to-end manufacturing and engineering services to support our clients throughout the project lifecycle. Our comprehensive service portfolio includes manufacturing, quality assurance, engineering support, and after-sales services.</p>
             </div>
 
             <div class="row g-4">
@@ -419,35 +479,92 @@
             
             // Core Services Data
             $scope.services = [
+                // Manufacturing Services
                 {
                     icon: 'fas fa-cog',
-                    title: 'MANUFACTURING',
-                    desc: 'Precision CNC machining and fabrication for custom-engineered components and assemblies.'
+                    title: 'CNC TURNING & MILLING',
+                    desc: 'Precision CNC machining services for complex components with tight tolerances and superior surface finish.'
                 },
                 {
-                    icon: 'fas fa-tools',
-                    title: 'MAINTENANCE & REPAIR',
-                    desc: 'Comprehensive maintenance, servicing, and repair solutions for existing equipment.'
+                    icon: 'fas fa-drill',
+                    title: 'DRILLING, BORING & THREADING',
+                    desc: 'Advanced drilling and boring operations with precision threading for various industrial applications.'
                 },
                 {
-                    icon: 'fas fa-flask',
-                    title: 'TESTING & QA',
-                    desc: 'Rigorous quality assurance and performance testing to meet international standards.'
+                    icon: 'fas fa-fire',
+                    title: 'HEAT TREATMENT COORDINATION',
+                    desc: 'Professional heat treatment services to enhance material properties and ensure optimal performance.'
                 },
                 {
-                    icon: 'fas fa-lightbulb',
-                    title: 'ENGINEERING DESIGN',
-                    desc: 'Custom design and engineering solutions tailored to your specific requirements.'
+                    icon: 'fas fa-layer-group',
+                    title: 'SURFACE FINISHING',
+                    desc: 'Customized surface finishing solutions as per requirement including coating, plating, and polishing.'
+                },
+                
+                // Quality & Inspection Services
+                {
+                    icon: 'fas fa-certificate',
+                    title: 'MATERIAL TEST CERTIFICATES (MTC/MTR)',
+                    desc: 'Comprehensive material testing and certification to ensure compliance with industry standards.'
                 },
                 {
-                    icon: 'fas fa-truck',
-                    title: 'LOGISTICS & DELIVERY',
-                    desc: 'On-time project delivery with efficient supply chain management worldwide.'
+                    icon: 'fas fa-ruler-combined',
+                    title: 'DIMENSIONAL INSPECTION',
+                    desc: 'Precise dimensional verification and inspection services using advanced measuring equipment.'
+                },
+                {
+                    icon: 'fas fa-hammer',
+                    title: 'HARDNESS TESTING',
+                    desc: 'Professional hardness testing services to verify material properties and quality standards.'
+                },
+                {
+                    icon: 'fas fa-search',
+                    title: 'THIRD-PARTY INSPECTION (TPI)',
+                    desc: 'Independent third-party inspection coordination to ensure unbiased quality verification.'
+                },
+                {
+                    icon: 'fas fa-check-double',
+                    title: 'ASTM, ASME, API, NACE COMPLIANCE',
+                    desc: 'Full compliance verification with international standards including ASTM, ASME, API, and NACE.'
+                },
+                
+                // Engineering & Technical Support
+                {
+                    icon: 'fas fa-drafting-compass',
+                    title: 'DESIGN ASSISTANCE',
+                    desc: 'Expert design assistance and manufacturability review to optimize product performance and cost.'
+                },
+                {
+                    icon: 'fas fa-atom',
+                    title: 'MATERIAL SELECTION GUIDANCE',
+                    desc: 'Professional guidance on optimal material selection based on application requirements and conditions.'
+                },
+                {
+                    icon: 'fas fa-chart-line',
+                    title: 'COST OPTIMIZATION SOLUTIONS',
+                    desc: 'Value engineering and cost optimization strategies to maximize efficiency and reduce expenses.'
+                },
+                {
+                    icon: 'fas fa-file-alt',
+                    title: 'DOCUMENTATION SUPPORT',
+                    desc: 'Comprehensive technical documentation, drawings, and specification support services.'
+                },
+                
+                // Supply & After-Sales Support
+                {
+                    icon: 'fas fa-clock',
+                    title: 'ON-TIME DELIVERY',
+                    desc: 'Reliable project delivery with efficient supply chain management and logistics coordination.'
+                },
+                {
+                    icon: 'fas fa-box',
+                    title: 'EXPORT PACKAGING',
+                    desc: 'Professional export packaging services ensuring safe transportation and delivery worldwide.'
                 },
                 {
                     icon: 'fas fa-headset',
-                    title: 'TECHNICAL SUPPORT',
-                    desc: 'Dedicated after-sales support and technical consultation for optimal performance.'
+                    title: 'TECHNICAL CLARIFICATION & SUPPORT',
+                    desc: 'Dedicated technical support team providing clarifications and customer assistance throughout the project lifecycle.'
                 }
             ];
 
