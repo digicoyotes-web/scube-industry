@@ -132,6 +132,69 @@
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
+/* Product Card Styling */
+.tubing-product-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tubing-product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.tubing-product-img-wrapper {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    background: var(--light-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tubing-product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+.tubing-product-card:hover .tubing-product-img {
+    transform: scale(1.08);
+}
+
+.tubing-product-card-body {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.tubing-product-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #02204c;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tubing-product-desc {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
 
         /* --- FOOTER STYLES --- */
         .footer { background-color: var(--primary-blue); color: white; padding: 60px 0 20px; font-size: 0.85rem; }
@@ -246,23 +309,11 @@
                 <div class="custom-product-list">
                     <div class="product-row">
                         <i class="far fa-check-circle"></i>
-                        <span>Motor Head Assemblies (MHA)</span>
+                        <span>Lubricator</span>
                     </div>
                     <div class="product-row">
                         <i class="far fa-check-circle"></i>
-                        <span>Dual Flapper Check Valves</span>
-                    </div>
-                    <div class="product-row">
-                        <i class="far fa-check-circle"></i>
-                        <span>Hydraulic Disconnects</span>
-                    </div>
-                    <div class="product-row">
-                        <i class="far fa-check-circle"></i>
-                        <span>Circulating Subs & Jetting Nozzles</span>
-                    </div>
-                    <div class="product-row">
-                        <i class="far fa-check-circle"></i>
-                        <span>Coiled Tubing Connectors (Dimple, Roll-on)</span>
+                        <span>Crossover</span>
                     </div>
                 </div>
             </div>
@@ -292,7 +343,38 @@
     </div>
 </section>
 	
-	
+<!-- Coiled Tubing Products Section -->
+<section class="py-5" style="background-color: #f8f9fa;">
+    <div class="container">
+        <h2 style="font-size: 2.2rem; font-weight: 600; color: #02204c; margin-bottom: 50px; text-align: center; text-transform: uppercase;">Pressure Control Equipment</h2>
+        
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-6">
+                <div class="tubing-product-card">
+                    <div class="tubing-product-img-wrapper">
+                        <img src="Coiled Tubing Tools/LUBRICATOR.jpg" class="tubing-product-img" alt="Lubricator">
+                    </div>
+                    <div class="tubing-product-card-body">
+                        <h5 class="tubing-product-title">Lubricator</h5>
+                        <p class="tubing-product-desc">High-performance lubricator systems designed for safe and efficient coiled tubing operations in high-pressure well environments.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-6">
+                <div class="tubing-product-card">
+                    <div class="tubing-product-img-wrapper">
+                        <img src="Coiled Tubing Tools/crossover.avif" class="tubing-product-img" alt="Crossover">
+                    </div>
+                    <div class="tubing-product-card-body">
+                        <h5 class="tubing-product-title">Crossover</h5>
+                        <p class="tubing-product-desc">Precision-engineered crossover assemblies for seamless connection and reliable pressure control in coiled tubing systems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
         <footer class="footer">
         <div class="container">
