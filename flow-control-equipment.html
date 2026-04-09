@@ -145,6 +145,69 @@
     .precision-image-box img { height: auto; margin-top: 20px; }
 }
 
+/* Product Card Styling */
+.flow-product-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.flow-product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.flow-product-img-wrapper {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    background: var(--light-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flow-product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+.flow-product-card:hover .flow-product-img {
+    transform: scale(1.08);
+}
+
+.flow-product-card-body {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.flow-product-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #02204c;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.flow-product-desc {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
 
         /* --- FOOTER STYLES --- */
         .footer { background-color: var(--primary-blue); color: white; padding: 60px 0 20px; font-size: 0.85rem; }
@@ -304,6 +367,63 @@
 </section>
 
 	
+
+<!-- Flow Control Products Section -->
+<section class="py-5" style="background-color: #f8f9fa;">
+    <div class="container">
+        <h2 style="font-size: 2.2rem; font-weight: 600; color: #02204c; margin-bottom: 50px; text-align: center; text-transform: uppercase;">Our Flow Control Products</h2>
+        
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="flow-product-card">
+                    <div class="flow-product-img-wrapper">
+                        <img src="PRODUCTS/Landing nipples.jpg" class="flow-product-img" alt="Landing Nipple">
+                    </div>
+                    <div class="flow-product-card-body">
+                        <h5 class="flow-product-title">Landing Nipple</h5>
+                        <p class="flow-product-desc">Precision-engineered landing nipples for downhole tool positioning and well completion operations.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="flow-product-card">
+                    <div class="flow-product-img-wrapper">
+                        <img src="flow control.jpg.jpg" class="flow-product-img" alt="Sliding Sleeve">
+                    </div>
+                    <div class="flow-product-card-body">
+                        <h5 class="flow-product-title">Sliding Sleeve</h5>
+                        <p class="flow-product-desc">Advanced sliding sleeve assemblies for selective zone isolation and flow control in multi-zone completions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="flow-product-card">
+                    <div class="flow-product-img-wrapper">
+                        <img src="PRODUCTS/Hydraulic packers.jpg" class="flow-product-img" alt="Lock Mandrel">
+                    </div>
+                    <div class="flow-product-card-body">
+                        <h5 class="flow-product-title">Lock Mandrel</h5>
+                        <p class="flow-product-desc">Robust lock mandrel systems for secure tool string assembly and reliable downhole performance.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="flow-product-card">
+                    <div class="flow-product-img-wrapper">
+                        <img src="PRODUCTS/Pressure-containing parts.png" class="flow-product-img" alt="Plug and Equalising Assemblies">
+                    </div>
+                    <div class="flow-product-card-body">
+                        <h5 class="flow-product-title">Plug & Equalising Assemblies</h5>
+                        <p class="flow-product-desc">Precision plug and equalising assemblies for pressure equalization and well intervention operations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
         <footer class="footer">
         <div class="container">
