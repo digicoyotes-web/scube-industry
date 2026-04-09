@@ -176,6 +176,69 @@
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
+/* Product Card Styling */
+.completion-product-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.completion-product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.completion-product-img-wrapper {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    background: var(--light-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.completion-product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+.completion-product-card:hover .completion-product-img {
+    transform: scale(1.08);
+}
+
+.completion-product-card-body {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.completion-product-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #02204c;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.completion-product-desc {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
         /* --- FOOTER STYLES --- */
         .footer { background-color: var(--primary-blue); color: white; padding: 60px 0 20px; font-size: 0.85rem; }
         .footer h5 { font-weight: 500; font-size: 1rem; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
@@ -329,6 +392,75 @@
                 </div>
                 <div class="integrity-image-wrapper">
                     <img src="https://gilmore.b-cdn.net/wp-content/uploads/2023/12/shutterstock-2240774041_7e45a0cdc86c770e37e2f2b3b74f0d3d_2000-827x465.jpg" alt="Securing Well Integrity" class="img-fluid rounded-4 shadow">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Completion Equipment Products Section -->
+<section class="py-5" style="background-color: #f8f9fa;">
+    <div class="container">
+        <h2 style="font-size: 2.2rem; font-weight: 600; color: #02204c; margin-bottom: 50px; text-align: center; text-transform: uppercase;">Our Completion Equipment</h2>
+        
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="completion-product-card">
+                    <div class="completion-product-img-wrapper">
+                        <img src="PRODUCTS/Hydraulic packers.jpg" class="completion-product-img" alt="Production Packers">
+                    </div>
+                    <div class="completion-product-card-body">
+                        <h5 class="completion-product-title">Production Packers</h5>
+                        <p class="completion-product-desc">Retrievable and permanent production packers engineered for reliable well isolation and long-term production optimization.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="completion-product-card">
+                    <div class="completion-product-img-wrapper">
+                        <img src="PRODUCTS/Landing nipples.jpg" class="completion-product-img" alt="Sliding Sleeves & Landing Nipples">
+                    </div>
+                    <div class="completion-product-card-body">
+                        <h5 class="completion-product-title">Sliding Sleeves & Landing Nipples</h5>
+                        <p class="completion-product-desc">Precision-engineered sliding sleeves and landing nipples for selective zone isolation and downhole tool positioning.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="completion-product-card">
+                    <div class="completion-product-img-wrapper">
+                        <img src="PRODUCTS/Safety valves.jpg" class="completion-product-img" alt="Subsurface Safety Valves">
+                    </div>
+                    <div class="completion-product-card-body">
+                        <h5 class="completion-product-title">Subsurface Safety Valves</h5>
+                        <p class="completion-product-desc">Advanced subsurface safety valves (SSSV) for critical well control and production safety in offshore and onshore applications.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="completion-product-card">
+                    <div class="completion-product-img-wrapper">
+                        <img src="PRODUCTS/Pressure-containing parts.png" class="completion-product-img" alt="Expansion Joints & PBR">
+                    </div>
+                    <div class="completion-product-card-body">
+                        <h5 class="completion-product-title">Expansion Joints & PBR</h5>
+                        <p class="completion-product-desc">Precision expansion joints and polished bore receptacles (PBR) for reliable downhole connections and thermal expansion management.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="completion-product-card">
+                    <div class="completion-product-img-wrapper">
+                        <img src="PRODUCTS/Machined forged components.jpg" class="completion-product-img" alt="Gas Lift Mandrels & Valves">
+                    </div>
+                    <div class="completion-product-card-body">
+                        <h5 class="completion-product-title">Gas Lift Mandrels & Valves</h5>
+                        <p class="completion-product-desc">High-performance gas lift mandrels and valves designed for efficient artificial lift operations and production enhancement.</p>
+                    </div>
                 </div>
             </div>
         </div>
