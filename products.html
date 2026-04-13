@@ -391,15 +391,21 @@
             margin-top: 80px;
         }
         .footer h5 { font-weight: 500; font-size: 1rem; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
-        .footer-links { list-style: none; padding: 0; }
+        .footer-links { list-style: none; padding: 0; margin: 0; }
         .footer-links li { margin-bottom: 10px; }
         .footer-links a { color: #aaa; text-decoration: none; transition: color 0.3s; }
         .footer-links a:hover { color: white; }
-        .footer-contact i { width: 20px; color: var(--accent-blue); margin-right: 10px; flex-shrink: 0; }
-        .footer-contact p { margin-bottom: 10px; color: #aaa; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: flex; align-items: center; gap: 5px; }
+        .footer-contact { padding-left: 20px; }
+        .footer-contact { padding-left: 20px; } .footer-contact i { width: 20px; color: var(--accent-blue); margin-right: 10px; flex-shrink: 0; }
+        .footer-contact p { margin-bottom: 10px; color: #aaa; display: flex; align-items: center; gap: 5px; white-space: nowrap; }
         .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; margin-top: 40px; text-align: center; color: #777; font-size: 0.75rem; }
         @media (max-width: 1200px) {
+            .footer-contact { padding-left: 10px; }
             .footer-contact p { font-size: 0.8rem; }
+        }
+        @media (max-width: 992px) {
+            .footer-contact { padding-left: 0; }
+            .col-lg-2.offset-lg-1 { margin-left: 0 !important; }
         }
         @media (max-width: 768px) {
             .footer-contact p { white-space: normal; }
@@ -686,7 +692,18 @@
             <div class="category-section" id="completion-section">
                 <h3 class="category-section-title">Completion Equipment</h3>
                 <div class="row g-4 mb-5">
-                    
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card product-card">
+                            <div class="product-img-wrapper">
+                                <img src="PRODUCTS/Hydraulic packers.jpg" class="product-img" alt="Production Packers">
+                            </div>
+                            <div class="product-card-body">
+                                <h5 class="product-title">Production Packers</h5>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- FLOW CONTROL PRODUCTS -->
