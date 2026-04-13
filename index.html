@@ -617,18 +617,56 @@
     <section id="scubeHeroCarousel" class="carousel slide" data-bs-ride="carousel">
         
         <div class="carousel-inner">
-            <div class="carousel-item" ng-repeat="slide in slides" ng-class="{active: $first}">
-                <div class="hero-slide-bg" ng-style="{'background-image': 'url(' + slide.image + ')'}">
+            <div class="carousel-item active">
+                <div class="hero-slide-bg" style="background-image: url('banner1.jpg.jpg');">
                     <div class="container">
                         <div class="row w-100">
                             <div class="col-lg-8">
                                 <div class="hero-content text-white">
-                                    <span class="hero-subtitle">{{ slide.subtitle }}</span>
-                                    <h1 class="hero-title" style="font-family: 'Oswald', sans-serif !important;">{{ slide.title1 }}<br>{{ slide.title2 }}</h1>
-                                    <p class="hero-text">{{ slide.text }}</p>
+                                    <span class="hero-subtitle">UPSTREAM TO DOWNSTREAM.</span>
+                                    <h1 class="hero-title" style="font-family: 'Oswald', sans-serif !important;">GLOBAL ENERGY<br>SOLUTIONS</h1>
+                                    <p class="hero-text">Whether it is upstream, midstream, or downstream applications, SCUBE Industries stands as a trusted partner delivering performance-driven solutions.</p>
                                     <div class="d-flex gap-3 mt-4">
-                                        <button class="btn btn-light-custom">{{ slide.btn1 }} <i class="fas fa-arrow-right ms-2" ng-if="$first"></i></button>
-                                        <button class="btn btn-primary-custom" style="border-color:white;">{{ slide.btn2 }}</button>
+                                        <button class="btn btn-light-custom">CONTACT US <i class="fas fa-arrow-right ms-2"></i></button>
+                                        <button class="btn btn-primary-custom" style="border-color:white;">GET A QUOTE</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="hero-slide-bg" style="background-image: url('banner2.jpg.jpg');">
+                    <div class="container">
+                        <div class="row w-100">
+                            <div class="col-lg-8">
+                                <div class="hero-content text-white">
+                                    <span class="hero-subtitle">ENGINEERING EXCELLENCE.</span>
+                                    <h1 class="hero-title" style="font-family: 'Oswald', sans-serif !important;">INNOVATIVE<br>MANUFACTURING</h1>
+                                    <p class="hero-text">At SCUBE Industries, we take pride in being a professionally managed organization specializing in the manufacturing and servicing of high-quality oil & gas equipment.</p>
+                                    <div class="d-flex gap-3 mt-4">
+                                        <button class="btn btn-light-custom">EXPLORE PRODUCTS <i class="fas fa-arrow-right ms-2"></i></button>
+                                        <button class="btn btn-primary-custom" style="border-color:white;">GET A QUOTE</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="hero-slide-bg" style="background-image: url('The Bolting Expert.jpg');">
+                    <div class="container">
+                        <div class="row w-100">
+                            <div class="col-lg-8">
+                                <div class="hero-content text-white">
+                                    <span class="hero-subtitle">SPECIALIZED EXPERTISE.</span>
+                                    <h1 class="hero-title" style="font-family: 'Oswald', sans-serif !important;">BOLTING<br>SOLUTIONS</h1>
+                                    <p class="hero-text">Expert bolting services and solutions designed for critical applications in the oil and gas industry with precision and reliability.</p>
+                                    <div class="d-flex gap-3 mt-4">
+                                        <button class="btn btn-light-custom">LEARN MORE <i class="fas fa-arrow-right ms-2"></i></button>
+                                        <button class="btn btn-primary-custom" style="border-color:white;">GET A QUOTE</button>
                                     </div>
                                 </div>
                             </div>
@@ -640,7 +678,9 @@
 
         <div class="hero-controls-wrapper">
             <div class="carousel-indicators scube-indicators">
-                <button type="button" ng-repeat="slide in slides" data-bs-target="#scubeHeroCarousel" data-bs-slide-to="{{$index}}" ng-class="{active: $first}" aria-current="true"></button>
+                <button type="button" data-bs-target="#scubeHeroCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#scubeHeroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#scubeHeroCarousel" data-bs-slide-to="2"></button>
             </div>
             <div class="scube-nav-btns">
                 <button class="scube-carousel-btn prev" type="button" data-bs-target="#scubeHeroCarousel" data-bs-slide="prev">
@@ -1010,37 +1050,6 @@
        
 
         app.controller('MainCtrl', function($scope) {
-            
-            // Hero Slides Data
-            $scope.slides = [
-                {
-                    image: 'banner1.jpg.jpg',
-                    subtitle: 'UPSTREAM TO DOWNSTREAM.',
-                    title1: 'GLOBAL ENERGY',
-                    title2: 'SOLUTIONS',
-                    text: 'Whether it is upstream, midstream, or downstream applications, SCUBE Industries stands as a trusted partner delivering performance-driven solutions.',
-                    btn1: 'CONTACT US',
-                    btn2: 'GET A QUOTE'
-                },
-                {
-                    image: 'banner2.jpg.jpg',
-                    subtitle: 'ENGINEERING EXCELLENCE.',
-                    title1: 'INNOVATIVE',
-                    title2: 'MANUFACTURING',
-                    text: 'At SCUBE Industries, we take pride in being a professionally managed organization specializing in the manufacturing and servicing of high-quality oil & gas equipment.',
-                    btn1: 'EXPLORE PRODUCTS',
-                    btn2: 'GET A QUOTE'
-                },
-                {
-                    image: 'The Bolting Expert.jpg',
-                    subtitle: 'SPECIALIZED EXPERTISE.',
-                    title1: 'BOLTING',
-                    title2: 'SOLUTIONS',
-                    text: 'Expert bolting services and solutions designed for critical applications in the oil and gas industry with precision and reliability.',
-                    btn1: 'LEARN MORE',
-                    btn2: 'GET A QUOTE'
-                }
-            ];
            
             // Products Data
             $scope.products = [
