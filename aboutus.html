@@ -330,7 +330,8 @@
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6" ng-repeat="cap in capabilities">
                     <div class="capability-item">
-                        <i class="{{cap.icon}} capability-icon"></i>
+                        <i class="{{cap.icon}} capability-icon" ng-if="!cap.image"></i>
+                        <img ng-if="cap.image" ng-src="{{cap.image}}" class="img-fluid rounded mb-3" alt="{{cap.title}}" style="width: 100%; height: 200px; object-fit: cover;">
                         <h5>{{cap.title}}</h5>
                         <p>{{cap.desc}}</p>
                     </div>
@@ -513,7 +514,8 @@
                 {
                     icon: 'fas fa-valve',
                     title: 'Precision Valve Services',
-                    desc: 'Specialized design, manufacturing, and servicing of precision valves for critical applications.'
+                    desc: 'Specialized design, manufacturing, and servicing of precision valves for critical applications.',
+                    image: 'The Bolting Expert.jpg?v=1'
                 }
             ];
 
