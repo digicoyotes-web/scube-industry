@@ -193,7 +193,7 @@
             <div class="col-lg-7">
                 <div class="contact-form-wrap">
                     <h4 class="fw-bold mb-4">SEND US A MESSAGE</h4>
-                    <form action="https://usebasin.com/f/cbbde3d3268a" method="POST">
+                    <form id="contactForm">
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label class="form-label">First Name</label>
@@ -279,6 +279,47 @@
             $scope.sendMessage = function() {
                 alert("Message sent successfully! Our team will contact you shortly.");
             };
+        });
+
+        // Handle contact form submission
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
+                    const formData = {
+                        firstName: document.querySelector('input[name="firstName"]').value,
+                        lastName: document.querySelector('input[name="lastName"]').value,
+                        email: document.querySelector('input[name="email"]').value,
+                        phone: document.querySelector('input[name="phone"]').value,
+                        subject: document.querySelector('input[name="subject"]').value,
+                        message: document.querySelector('textarea[name="message"]').value
+                    };
+
+                    try {
+                        const response = await fetch('/api/contact', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify(formData)
+                        });
+
+                        const data = await response.json();
+
+                        if (response.ok) {
+                            alert('Message sent successfully! Our team will contact you shortly.');
+                            contactForm.reset();
+                        } else {
+                            alert('Error: ' + (data.error || 'Failed to send message'));
+                        }
+                    } catch (error) {
+                        console.error('Error:', error);
+                        alert('Failed to send message. Please try again.');
+                    }
+                });
+            }
         });
     </script>
 </body>

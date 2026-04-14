@@ -170,7 +170,7 @@
             <div class="col-lg-6">
                 <div class="form-container">
                     <h4 class="fw-bold mb-4">APPLY NOW</h4>
-                    <form action="https://usebasin.com/f/042c3cacf064" method="POST" enctype="multipart/form-data">
+                    <form id="careersForm">
                         <div class="mb-3">
                             <label class="form-label">Full Name</label>
                             <input type="text" name="fullName" class="form-control" placeholder="Enter your name" required>
@@ -268,6 +268,47 @@
             $scope.submitApplication = function() {
                 alert("Thank you for applying! Our HR team will review your profile and get back to you.");
             };
+        });
+
+        // Handle careers form submission
+        document.addEventListener('DOMContentLoaded', function() {
+            const careersForm = document.getElementById('careersForm');
+            if (careersForm) {
+                careersForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
+                    const formDataObj = new FormData();
+                    formDataObj.append('fullName', document.querySelector('input[name="fullName"]').value);
+                    formDataObj.append('email', document.querySelector('input[name="email"]').value);
+                    formDataObj.append('phone', document.querySelector('input[name="phone"]').value);
+                    formDataObj.append('location', document.querySelector('input[name="location"]').value);
+                    formDataObj.append('position', document.querySelector('select[name="position"]').value);
+                    
+                    const resumeFile = document.querySelector('input[name="resume"]').files[0];
+                    if (resumeFile) {
+                        formDataObj.append('resume', resumeFile);
+                    }
+
+                    try {
+                        const response = await fetch('/api/careers', {
+                            method: 'POST',
+                            body: formDataObj
+                        });
+
+                        const data = await response.json();
+
+                        if (response.ok) {
+                            alert('Thank you for applying! Our HR team will review your profile and get back to you.');
+                            careersForm.reset();
+                        } else {
+                            alert('Error: ' + (data.error || 'Failed to submit application'));
+                        }
+                    } catch (error) {
+                        console.error('Error:', error);
+                        alert('Failed to submit application. Please try again.');
+                    }
+                });
+            }
         });
     </script>
 </body>
