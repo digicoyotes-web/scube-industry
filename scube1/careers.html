@@ -170,18 +170,18 @@
             <div class="col-lg-6">
                 <div class="form-container">
                     <h4 class="fw-bold mb-4">APPLY NOW</h4>
-                    <form ng-submit="submitApplication()">
+                    <form action="https://formspree.io/f/xyzabc456" method="POST" enctype="multipart/form-data">
                         <div class="mb-3">
                             <label class="form-label">Full Name</label>
-                            <input type="text" class="form-control" placeholder="Enter your name" required>
+                            <input type="text" name="fullName" class="form-control" placeholder="Enter your name" required>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Email Address</label>
-                            <input type="email" class="form-control" placeholder="example@mail.com" required>
+                            <input type="email" name="email" class="form-control" placeholder="example@mail.com" required>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Position Applied For</label>
-                            <select class="form-select" required>
+                            <select name="position" class="form-select" required>
                                 <option value="" selected disabled>Select a position</option>
                                 <option>CNC Operator</option>
                                 <option>Design Engineer</option>
@@ -191,7 +191,7 @@
                         </div>
                         <div class="mb-4">
                             <label class="form-label">Resume Link (GDrive/Dropbox)</label>
-                            <input type="url" class="form-control" placeholder="https://" required>
+                            <input type="url" name="resumeLink" class="form-control" placeholder="https://" required>
                         </div>
                         <button type="submit" class="btn-submit">Submit Application</button>
                     </form>
