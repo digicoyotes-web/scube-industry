@@ -193,7 +193,7 @@
             <div class="col-lg-7">
                 <div class="contact-form-wrap">
                     <h4 class="fw-bold mb-4">SEND US A MESSAGE</h4>
-                    <form id="contactForm">
+                    <form id="contactForm" method="POST" action="api/contact.php">
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label class="form-label">First Name</label>
@@ -288,22 +288,12 @@
                 contactForm.addEventListener('submit', async function(e) {
                     e.preventDefault();
                     
-                    const formData = {
-                        firstName: document.querySelector('input[name="firstName"]').value,
-                        lastName: document.querySelector('input[name="lastName"]').value,
-                        email: document.querySelector('input[name="email"]').value,
-                        phone: document.querySelector('input[name="phone"]').value,
-                        subject: document.querySelector('input[name="subject"]').value,
-                        message: document.querySelector('textarea[name="message"]').value
-                    };
+                    const formData = new FormData(contactForm);
 
                     try {
-                        const response = await fetch('/api/contact', {
+                        const response = await fetch('api/contact.php', {
                             method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json',
-                            },
-                            body: JSON.stringify(formData)
+                            body: formData
                         });
 
                         const data = await response.json();

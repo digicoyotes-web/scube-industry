@@ -170,7 +170,7 @@
             <div class="col-lg-6">
                 <div class="form-container">
                     <h4 class="fw-bold mb-4">APPLY NOW</h4>
-                    <form id="careersForm">
+                    <form id="careersForm" method="POST" action="api/careers.php" enctype="multipart/form-data">
                         <div class="mb-3">
                             <label class="form-label">Full Name</label>
                             <input type="text" name="fullName" class="form-control" placeholder="Enter your name" required>
@@ -265,22 +265,12 @@
                 careersForm.addEventListener('submit', async function(e) {
                     e.preventDefault();
                     
-                    const formData = {
-                        fullName: document.querySelector('input[name="fullName"]').value,
-                        email: document.querySelector('input[name="email"]').value,
-                        phone: '+91 XXXXX XXXXX',
-                        location: 'Not specified',
-                        position: document.querySelector('select[name="position"]').value,
-                        resumeLink: document.querySelector('input[name="resumeLink"]').value
-                    };
+                    const formData = new FormData(careersForm);
 
                     try {
-                        const response = await fetch('/api/careers', {
+                        const response = await fetch('api/careers.php', {
                             method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json',
-                            },
-                            body: JSON.stringify(formData)
+                            body: formData
                         });
 
                         const data = await response.json();
